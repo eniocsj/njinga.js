@@ -1,0 +1,8 @@
+const root = process.cwd() + '/databases/'
+
+module.exports = {
+  'config':          root + 'config.js',
+  'migrations-path': root + 'migrations',
+  'models-path':     root + 'models',
+  'seeders-path':    root + 'seeders',
+}

@@ -1,0 +1,47 @@
+{
+  "name": "njinga",
+  "version": "0.0.1",
+  "description": "Njinga skeleton server",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "njinga": "cmd.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "argon2": "^0.26.2",
+    "chalk": "^4.0.0",
+    "cors": "^2.8.5",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1",
+    "passport": "^0.4.1",
+    "readline-sync": "^1.4.10",
+    "sequelize": "^5.21.7",
+    "sequelize-automate": "^1.2.0",
+    "shelljs": "^0.8.4",
+    "yargs": "^15.3.1"
+  },
+  "optionalDependencies": {
+    "pg": "^8.0.3",
+    "pg-hstore": "^2.3.3",
+    "sqlite": "^4.0.7",
+    "sqlite3": "^4.2.0"
+  },
+  "author": {
+    "name": "Enio Climaco Sales Junior",
+    "email": "eniocsjunior@gmail.com"
+  },
+  "access": "public",
+  "os": [
+    "darwin",
+    "linux",
+    "freebsd",
+    "openbsd",
+    "sunos",
+    "!win32"
+  ],
+  "preferGlobal": true
+}
