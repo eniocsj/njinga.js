@@ -1,0 +1,27 @@
+[
+    {
+        "type": "input",
+        "name": "host",
+        "message": "Host:"
+    },
+    {
+        "type": "input",
+        "name": "port",
+        "message": "Port:"
+    },
+    {
+        "type": "input",
+        "name": "database",
+        "message": "Database:"
+    },
+    {
+        "type": "input",
+        "name": "username",
+        "message": "Username:"
+    },
+    {
+        "type": "password",
+        "name": "password",
+        "message": "Password:"
+    }
+]

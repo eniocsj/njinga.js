@@ -1,4 +1,4 @@
-require('dotenv-safe').config();
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const ip = require('./controllers/ipAddress');
@@ -10,42 +10,43 @@ const register = require('./resources/register');
 const login = require('./resources/login');
 
 app.use(
-	express.json()
+        express.json()
 );
 app.use(
-	express.urlencoded(
-		{
-			extended: true
-		}
-	)
+    express.urlencoded(
+        {
+            extended: true
+        }
+    )
 );
 app.use(
-	cors()
+    cors()
 );
 app.use(
-	initialization
+    initialization
 )
 app.use(
-	auth
+    auth
 );
+app.all('/', help)
 app.route('/help')
-	.get(
-		help
-	)
-	.post(
-		help
-	);
+    .get(
+        help
+    )
+    .post(
+        help
+    );
 app.post(
-	'/register',
-	register
+    '/register',
+    register
 );
 app.post(
-	'/login',
-	login
+    '/login',
+    login
 );
 app.listen(
-	process.env.PORT || 8080,
-	() => console.log(
-		`Address: http//${ ip() }:${ process.env.PORT || 8080 }\n`
-	)
+    process.env.PORT || 8080,
+    () => console.log(
+        `Address: http//${ ip() }:${ process.env.PORT || 8080 }\n`
+    )
 );
